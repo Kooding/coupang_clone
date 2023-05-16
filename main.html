@@ -4,11 +4,127 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test html</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Coupang Clone Coding</title>
   </head>
-  <body>
-    <h1>Hello world</h1>
+  <body class="m-0">
+    <div class="w-full h-screen flex justify-center">
+      <div class="flex-col max-w-[500px] min-w-[500px] p-5 mt-6">
+        <header class="mb-4">
+          <h1>
+            <img
+              class="mx-auto cursor-pointer"
+              src="./assets/coupang_assets/logo.png"
+              alt="쿠팡 로고"
+            />
+          </h1>
+        </header>
+        <form class="login_form">
+          <div class="w-full">
+            <div class="flex mb-3 relative">
+              <label
+                class="bg-slate-100 border border-r-0 border-gray-300 w-[42px] h-[42px] p-2 flex justify-center items-center cursor-pointer"
+                for="login_id"
+              >
+                <img
+                  class="pointer-events-none"
+                  src="./assets/coupang_assets/icon_massage.png"
+                />
+              </label>
+              <input
+                class="p-2 w-full border border-gray-300 outline-none peer/logininput"
+                type="text"
+                name="login_id"
+                id="login_id"
+                placeholder="아이디(이메일)"
+              />
+              <div
+                class="absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
+              ></div>
+            </div>
+
+            <div class="flex mb-3 relative">
+              <label
+                class="bg-slate-100 border border-r-0 border-gray-300 w-[42px] h-[42px] p-2 flex justify-center items-center cursor-pointer"
+                for="login_pw"
+              >
+                <img
+                  class="pointer-events-none"
+                  src="./assets/coupang_assets/icon_lock.png"
+                />
+              </label>
+              <input
+                class="p-2 w-full border border-gray-300 outline-none peer/logininput"
+                type="password"
+                name="login_pw"
+                id="login_pw"
+                placeholder="비밀번호"
+              />
+              <div
+                class="bg-slate-100 border border-l-0 border-gray-300 w-[42px] h-[42px] p-2 flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  class="pointer-events-none"
+                  src="./assets/coupang_assets/icon_eyes.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
+              ></div>
+            </div>
+          </div>
+          <div class="flex justify-between mb-4">
+            <div class="flex">
+              <label class="order-2 px-2 text-sm text-gray-600" for="check"
+                >자동로그인</label
+              >
+              <input
+                class="order-1 w-5 h-5"
+                type="checkbox"
+                name="check"
+                id="check"
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <a class="text-blue-500 text-sm px-1" href=""
+                >아이디∙비밀번호 찾기
+              </a>
+              <img
+                src="./assets/coupang_assets/icon_right_arrow-blue.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <button
+            class="bg-blue-600 text-white py-2 text-center w-full rounded-md mb-4 font-bold"
+          >
+            로그인
+          </button>
+        </form>
+        <div class="border h-[1px] border-gray-200 mb-4"></div>
+        <button
+          class="text-gray-600 py-2 text-center w-full border border-gray-500 rounded-md mb-8 font-bold"
+        >
+          회원가입
+        </button>
+        <div class="mb-2 text-center">
+          <p class="text-gray-500 text-xs">법인 고객이신가요?</p>
+          <p class="text-gray-500 text-xs">
+            사업자 회원으로 전용 특가 혜택을 누려보세요.
+          </p>
+        </div>
+        <div class="flex justify-center items-center mb-10">
+          <p class="text-gray-600 font-bold text-sm text-center px-1">
+            쿠팡비즈 간편가입
+          </p>
+          <img src="./assets/coupang_assets/icon_right_arrow.png" />
+        </div>
+        <p class="text-gray-500 text-xs text-center">
+          ©Coupang Corp. All rights reserved.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
