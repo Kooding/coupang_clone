@@ -22,18 +22,18 @@
         </header>
         <form class="login_form">
           <div class="w-full">
-            <div class="flex mb-3 relative">
+            <div class="flex items-stretch mb-3 relative">
               <label
-                class="bg-slate-100 border border-r-0 border-gray-300 w-[42px] h-[42px] p-2 flex justify-center items-center cursor-pointer"
+                class="p-3 w-[45px] flex justify-center items-center bg-slate-50 border border-gray-300 border-r-0"
                 for="login_id"
               >
                 <img
                   class="pointer-events-none"
-                  src="./assets/coupang_assets/icon_massage.png"
+                  src="./assets/coupang_assets/icon_massage_resize.png"
                 />
               </label>
               <input
-                class="p-2 w-full border border-gray-300 outline-none peer/logininput"
+                class="flex-1 p-3 h-[48px] border border-gray-300 outline-none peer/logininput placeholder:font-bold"
                 type="text"
                 name="login_id"
                 id="login_id"
@@ -43,39 +43,39 @@
                 class="absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
               ></div>
             </div>
-
-            <div class="flex mb-3 relative">
+            <div class="flex items-stretch mb-3 relative">
               <label
-                class="bg-slate-100 border border-r-0 border-gray-300 w-[42px] h-[42px] p-2 flex justify-center items-center cursor-pointer"
+                class="p-3 w-[45px] flex justify-center items-center bg-slate-50 border border-gray-300 border-r-0"
                 for="login_pw"
               >
                 <img
                   class="pointer-events-none"
-                  src="./assets/coupang_assets/icon_lock.png"
+                  src="./assets/coupang_assets/icon_lock_resize.png"
                 />
               </label>
               <input
-                class="p-2 w-full border border-gray-300 outline-none peer/logininput"
+                class="flex-1 p-3 h-[48px] border border-gray-300 border-r-0 outline-none peer/logininput placeholder:font-bold"
                 type="password"
                 name="login_pw"
                 id="login_pw"
                 placeholder="비밀번호"
               />
-              <div
-                class="bg-slate-100 border border-l-0 border-gray-300 w-[42px] h-[42px] p-2 flex justify-center items-center cursor-pointer"
+              <button
+                class="p-3 flex justify-center items-center bg-white border border-gray-300 border-l-0 outline-none"
+                for="login_pw"
               >
                 <img
                   class="pointer-events-none"
                   src="./assets/coupang_assets/icon_eyes.png"
-                  alt=""
                 />
-              </div>
+              </button>
               <div
                 class="absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
               ></div>
             </div>
+            <p class="ml-2 text-xs text-red-600">비밀번호를 입력해주세요.</p>
           </div>
-          <div class="flex justify-between mb-4">
+          <div class="flex justify-between my-4">
             <div class="flex">
               <label class="order-2 px-2 text-sm text-gray-600" for="check"
                 >자동로그인</label
