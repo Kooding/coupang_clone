@@ -5,8 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .underline-error {
+          opacity: 100;
+          --tw-border-opacity: 1;
+          border-color: rgb(239 68 68 / var(--tw-border-opacity));
+        }
+      }
+    </style>
     <title>Coupang Clone Coding</title>
+    <script src="./script.js" defer></script>
   </head>
   <body class="m-0">
     <div class="w-full h-screen flex justify-center">
@@ -22,79 +31,87 @@
         </header>
         <form class="login_form">
           <div class="w-full">
-            <div class="flex items-stretch mb-3 relative">
-              <label
-                class="p-3 w-[45px] flex justify-center items-center bg-slate-50 border border-gray-300 border-r-0"
-                for="login_id"
-              >
-                <img
-                  class="pointer-events-none"
-                  src="./assets/coupang_assets/icon_massage_resize.png"
+            <div class="id_form">
+              <div class="id-wrap flex items-stretch mb-3 relative">
+                <label
+                  class="p-3 w-[45px] flex justify-center items-center bg-slate-50 border border-gray-300 border-r-0 select-none"
+                  for="login_id"
+                >
+                  <img
+                    class="pointer-events-none"
+                    src="./assets/coupang_assets/icon_massage_resize.png"
+                  />
+                </label>
+                <input
+                  class="flex-1 p-3 h-[48px] border border-gray-300 outline-none peer/logininput placeholder:font-bold"
+                  type="text"
+                  name="login_id"
+                  id="login_id"
+                  placeholder="아이디(이메일)"
                 />
-              </label>
-              <input
-                class="flex-1 p-3 h-[48px] border border-gray-300 outline-none peer/logininput placeholder:font-bold"
-                type="text"
-                name="login_id"
-                id="login_id"
-                placeholder="아이디(이메일)"
-              />
-              <div
-                class="absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
-              ></div>
+                <div
+                  class="underline absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
+                ></div>
+              </div>
+              <small class="ml-2 text-xs text-red-600 hidden mb-4"
+                >아이디(이메일)를 입력해주세요.</small
+              >
             </div>
-            <div class="flex items-stretch mb-3 relative">
-              <label
-                class="p-3 w-[45px] flex justify-center items-center bg-slate-50 border border-gray-300 border-r-0"
-                for="login_pw"
-              >
-                <img
-                  class="pointer-events-none"
-                  src="./assets/coupang_assets/icon_lock_resize.png"
+            <div class="pw_form">
+              <div class="pw-wrap flex items-stretch mb-3 relative">
+                <label
+                  class="p-3 w-[45px] flex justify-center items-center bg-slate-50 border border-gray-300 border-r-0 select-none"
+                  for="login_pw"
+                >
+                  <img
+                    class="pointer-events-none"
+                    src="./assets/coupang_assets/icon_lock_resize.png"
+                  />
+                </label>
+                <input
+                  class="flex-1 p-3 h-[48px] border border-gray-300 border-r-0 outline-none peer/logininput placeholder:font-bold"
+                  type="password"
+                  name="login_pw"
+                  id="login_pw"
+                  placeholder="비밀번호"
                 />
-              </label>
-              <input
-                class="flex-1 p-3 h-[48px] border border-gray-300 border-r-0 outline-none peer/logininput placeholder:font-bold"
-                type="password"
-                name="login_pw"
-                id="login_pw"
-                placeholder="비밀번호"
-              />
-              <button
-                class="p-3 flex justify-center items-center bg-white border border-gray-300 border-l-0 outline-none"
-                for="login_pw"
+                <button
+                  class="pw_view_btn p-3 flex justify-center items-center bg-white border border-gray-300 border-l-0 outline-none select-none"
+                  for="login_pw"
+                >
+                  <img
+                    class="pointer-events-none"
+                    src="./assets/coupang_assets/icon_eyes.png"
+                  />
+                </button>
+                <div
+                  class="underline absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
+                ></div>
+              </div>
+              <small class="ml-2 text-xs text-red-600 hidden"
+                >비밀번호를 입력해주세요.</small
               >
-                <img
-                  class="pointer-events-none"
-                  src="./assets/coupang_assets/icon_eyes.png"
-                />
-              </button>
-              <div
-                class="absolute -bottom-[1px] left-0 h-[2px] border border-blue-400 w-full opacity-0 peer-focus/logininput:opacity-100 transition-all ease-in"
-              ></div>
             </div>
-            <p class="ml-2 text-xs text-red-600">비밀번호를 입력해주세요.</p>
           </div>
           <div class="flex justify-between my-4">
-            <div class="flex">
-              <label class="order-2 px-2 text-sm text-gray-600" for="check"
+            <div class="flex cur">
+              <label
+                class="order-2 px-2 text-sm text-gray-600 cursor-pointer"
+                for="check"
                 >자동로그인</label
               >
               <input
-                class="order-1 w-5 h-5"
+                class="order-1 w-5 h-5 cursor-pointer"
                 type="checkbox"
                 name="check"
                 id="check"
               />
             </div>
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center cursor-pointer">
               <a class="text-blue-500 text-sm px-1" href=""
                 >아이디∙비밀번호 찾기
               </a>
-              <img
-                src="./assets/coupang_assets/icon_right_arrow-blue.png"
-                alt=""
-              />
+              <img src="./assets/coupang_assets/icon_right_arrow-blue.png" />
             </div>
           </div>
           <button
@@ -115,7 +132,7 @@
             사업자 회원으로 전용 특가 혜택을 누려보세요.
           </p>
         </div>
-        <div class="flex justify-center items-center mb-10">
+        <div class="flex justify-center items-center mb-10 cursor-pointer">
           <p class="text-gray-600 font-bold text-sm text-center px-1">
             쿠팡비즈 간편가입
           </p>
