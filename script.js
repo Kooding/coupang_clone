@@ -11,10 +11,14 @@ pwViewBtn.addEventListener("click", (e) => {
     const icon = e.target.querySelector("img");
     icon.src = "./assets/coupang_assets/icon_eyes_closed.png";
     inputPassword.type = "text";
+    inputPassword.classList.remove("tracking-[0.25rem]");
+    inputPassword.classList.add("tracking-normal");
   } else {
     const icon = e.target.querySelector("img");
     icon.src = "./assets/coupang_assets/icon_eyes.png";
     inputPassword.type = "password";
+    inputPassword.classList.remove("tracking-normal");
+    inputPassword.classList.add("tracking-[0.25rem]");
   }
 });
 
